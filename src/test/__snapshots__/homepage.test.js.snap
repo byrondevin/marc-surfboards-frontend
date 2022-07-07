@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`homepage matches snapshot 1`] = `
+<div
+  className="Homepage container-fluid m-0 p-0"
+>
+  <div
+    className="  text-center headRow p-0 m-0"
+    style={
+      Object {
+        "backgroundImage": "url(header-image-darkened.jpg)",
+        "backgroundSize": "cover",
+      }
+    }
+  >
+    <div
+      className="row text-center"
+    >
+      <div
+        className="col "
+        id=""
+      >
+        <div
+          className="divLogoImg p-0"
+          style={
+            Object {
+              "borderRadius": "30%",
+              "height": "150px",
+              "margin": "auto",
+              "overflow": "hidden",
+              "width": "150px",
+            }
+          }
+        />
+        <div
+          className="px-4"
+          id="heading"
+        >
+          <h1
+            className="headingText"
+          >
+            Handshaped Surfboards 
+          </h1>
+          <p
+            className="headingText"
+          >
+            Upcycle an old favourite or order a fresh custom 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row py-5 text-center align-items-center"
+    >
+      <div
+        className="col-12 col-md-3 mb-3"
+      >
+        <button
+          className="btn btn-light hp-head-btns"
+          type="button"
+        >
+          Shortboards
+        </button>
+      </div>
+      <div
+        className="col-12 col-md-3 mb-3"
+      >
+        <button
+          className="btn btn-light hp-head-btns"
+          type="button"
+        >
+          Eco/Upcycled
+        </button>
+      </div>
+      <div
+        className="col-12 col-md-3 mb-3"
+      >
+        <button
+          className="btn btn-light hp-head-btns"
+          type="button"
+        >
+          Longboards
+        </button>
+      </div>
+      <div
+        className="col-12 col-md-3 mb-3"
+      >
+        <button
+          className="btn btn-light hp-head-btns"
+          type="button"
+        >
+          Mid/Fun Boards
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row even text-light text-center rowBoardType align-items-center  py-5"
+    id="shortboardsContainer"
+  >
+    <div
+      className="col-12 col-sm-6"
+    >
+      <h2>
+        Performance Shortboards
+      </h2>
+      <p>
+        Price range: R10k - R15k
+      </p>
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Enquire
+      </button>
+    </div>
+    <div
+      className="col-12 col-sm-6"
+    >
+      <img
+        alt="shortboard-marc-surfboards"
+        className="rounded board-pic my-2 shadow"
+        display="block"
+        height="300"
+        id="shortboard"
+        src="shortboard.jpg"
+        width="auto"
+      />
+    </div>
+  </div>
+  <div
+    className="row odd text-center  rowBoardType align-items-center  py-5 "
+  >
+    <div
+      className="col-12 col-sm-6"
+    >
+      <img
+        alt="shortboard-marc-surfboards"
+        className="rounded board-pic my-2 shadow"
+        display="block"
+        height="300"
+        id="shortboard"
+        src="eco-board.jpg"
+        width="auto"
+      />
+    </div>
+    <div
+      className="col-12 col-sm-6"
+    >
+      <h2>
+        Eco/Upcycled Surfboards
+      </h2>
+      <p>
+        Price range: R7.5k - R10k
+      </p>
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Enquire
+      </button>
+    </div>
+  </div>
+  <div
+    className="row even text-center text-light rowBoardType align-items-center  py-5"
+  >
+    <div
+      className="col-12 col-sm-6"
+    >
+      <h2>
+        Longboards
+      </h2>
+      <p>
+        Price range: R10k - R20k
+      </p>
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Enquire
+      </button>
+    </div>
+    <div
+      className="col-12 col-sm-6"
+    >
+      <img
+        alt="shortboard-marc-surfboards"
+        className="rounded board-pic my-2 shadow"
+        display="block"
+        height="300"
+        id="shortboard"
+        src="longboard.jpg"
+        width="auto"
+      />
+    </div>
+  </div>
+  <div
+    className="row odd text-center rowBoardType align-items-center  py-5"
+  >
+    <div
+      className="col-12 col-sm-6"
+    >
+      <img
+        alt="shortboard-marc-surfboards"
+        className="rounded board-pic my-2 shadow"
+        display="block"
+        height="300"
+        id="shortboard"
+        src="fun-mid-board.jpg"
+        width="auto"
+      />
+    </div>
+    <div
+      className="col-12 col-sm-6"
+    >
+      <h2>
+        Midlengths and Funboards
+      </h2>
+      <p>
+        Price range: R8.5k - R20k
+      </p>
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Enquire
+      </button>
+    </div>
+  </div>
+  <div
+    className="contactRow container my-5"
+  >
+    <div
+      className="row text-center"
+    >
+      <div
+        className="col"
+      >
+        <h2>
+          Contact
+        </h2>
+      </div>
+    </div>
+    <div
+      className="row text-left align-items-center "
+    >
+      <div
+        className="col"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="form-group"
+          >
+            <label
+              for="nameInputEnquiry"
+            >
+              Name
+            </label>
+            <input
+              className="form-control"
+              id="nameInputEnquiry"
+              placeholder="Andrew Pits"
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              for="emailInputEnquiry"
+            >
+              Email address
+            </label>
+            <input
+              className="form-control"
+              id="emailInputEnquiry"
+              placeholder="hollow@heaven.com"
+              type="email"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              for="boardTypeSelect"
+            >
+              Board Type
+            </label>
+            <select
+              className="form-control"
+              id="boardTypeSelect"
+            >
+              <option>
+                Shortboard
+              </option>
+              <option>
+                Longboard
+              </option>
+              <option>
+                Funboard
+              </option>
+              <option>
+                Midlength
+              </option>
+              <option>
+                Eco/Uplcycled board
+              </option>
+            </select>
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              for="messageInput"
+            >
+              Message
+            </label>
+            <textarea
+              className="form-control"
+              id="messageInput"
+              placeholder="Briefly describe your new board..."
+              rows="3"
+            />
+          </div>
+          <button
+            className="btn btn-primary mt-4"
+            type="submit"
+          >
+            Submit Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

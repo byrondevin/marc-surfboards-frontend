@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signIn matches snapshot 1`] = `
+<div
+  className="SignIn container-fluid"
+>
+  <div
+    className="row text-center"
+  >
+    <div
+      className="col"
+    >
+      <h1>
+        Log in
+      </h1>
+    </div>
+  </div>
+  <div
+    className="row justify-content-center text-center"
+  >
+    <div
+      className="col-sm-6 m-5"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            for="exampleInputEmail1"
+          >
+            Email address
+          </label>
+          <input
+            aria-describedby="emailHelp"
+            className="form-control"
+            id="exampleInputEmail1"
+            name="exampleInputEmail1"
+            placeholder="Enter email"
+            type="email"
+          />
+          <small
+            className="form-text text-muted"
+            id="emailHelp"
+          >
+            We'll never share your email with anyone else.
+          </small>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            for="exampleInputPassword1"
+          >
+            Password
+          </label>
+          <input
+            className="form-control"
+            id="exampleInputPassword1"
+            name="exampleInputPassword1"
+            placeholder="Password"
+            type="password"
+          />
+        </div>
+        <button
+          className="btn btn-primary mt-4"
+          type="submit"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

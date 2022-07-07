@@ -1,0 +1,62 @@
+/* Background image styling at top of page */
+.headRow{
+    min-height: 50vh;
+    padding:0px;
+    background-color: #207082;
+    background-repeat: no-repeat;
+  }
+
+/* All buttons on page. coloring and hover scale with transition */
+  .btn{
+    background-color: #124559;
+    color: #FEECC7;
+    border-color: rgba(0,0,0,0.5);
+    transition:0.5s;
+  }
+
+  .btn:hover{
+    background-color: #186573;
+    color: white;
+    border-color: rgba(0,0,0,0.5);
+    transform:scale(1.1);
+  }
+
+/* marc surfbaords logo container */
+  .divLogoImg{
+    border-radius: 3px;
+  }
+
+/* H1 text */
+  .headingText{
+    
+    color: #E4DAD5;
+    text-shadow: 2px 2px 4px #000000;
+
+  }
+
+/* Rows with each board type: shortboard, longboard, etc. */
+  .rowBoardType{
+    min-height: 300px;
+    
+  }
+  
+/* EVEN Rows with each board type */
+  .even{
+    margin-top: 0px;
+    border-color:#207082;
+    background-color: #207082;
+    color: #FEECC7;
+  }
+
+/* ODD Rows with each board type */
+  .odd{
+    background-color: #CEE9DA;
+  }
+
+/* Bpard pic hover */
+  .board-pic{
+    transition:0.5s;
+  }
+  .board-pic:hover{
+    transform: scale(1.1);
+  }

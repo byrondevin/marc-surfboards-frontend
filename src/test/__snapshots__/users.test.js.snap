@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users matches snapshot 1`] = `
+<div
+  className="Users"
+>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="row text-center"
+    >
+      <div
+        className="col"
+      >
+        <h1>
+          Users
+        </h1>
+        <p
+          className="h3"
+        >
+          Marc Surfboards
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        className="row border p-5"
+      >
+        <div
+          className="col"
+        >
+          <h3>
+            User Information
+          </h3>
+          <p>
+            ID: 
+            Log In to see users
+          </p>
+          <p>
+            Email address: 
+            Only admin users have access to this page
+          </p>
+          <p>
+            Password: 
+            You have been denied entry
+          </p>
+          <p>
+            Admin: 
+            false
+          </p>
+          <button
+            className="btn btn-primary mt-4"
+            id="Log In to see users"
+            onClick={[Function]}
+            type="btn"
+          >
+            Delete
+          </button>
+        </div>
+        <div
+          className="col"
+        >
+          <h3>
+            Edit User Details
+          </h3>
+          <form
+            action="/users/Log In to see users?_method=PUT"
+            method="POST"
+          >
+            <div
+              className="form-group"
+            >
+              <label
+                for="emailEditForm"
+              >
+                Email address
+              </label>
+              <input
+                aria-describedby="emailHelp"
+                className="form-control"
+                name="emailEditForm"
+                placeholder="Enter email"
+                type="email"
+              />
+              <small
+                className="form-text text-muted"
+                id="emailHelp"
+              >
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+            <div
+              className="form-group"
+            >
+              <label
+                for="passwordEditForm"
+              >
+                Password
+              </label>
+              <input
+                className="form-control"
+                name="passwordEditForm"
+                placeholder="Password"
+                type="password"
+              />
+            </div>
+            <div
+              className="form-group form-check"
+            >
+              <input
+                className="form-check-input checked"
+                name="adminCheckbox"
+                type="checkbox"
+              />
+              <label
+                className="form-check-label"
+                for="adminCheckbox"
+              >
+                Admin access
+              </label>
+            </div>
+            <button
+              className="btn btn-primary mt-4"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
