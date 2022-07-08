@@ -15,7 +15,9 @@ export default  function Users() {
 
     //Request to Get all users 
       async function getUsers () {
+        console.log("START get users")
         let users = await axios.get(`/users`, {headers: {"Authorization": `Bearer ${JWT}`}});
+        console.log("AFTER get users")
         users= users.data;
         console.log(users)
         setUserState(users.data); 
