@@ -78,7 +78,7 @@ export default  function Enquiry() {
             <p className='h3'>Marc Surfboards</p>
           </div>
         </div>
-        
+        {console.log(enquiryState)};
             {/* Mapping Enquiries to display the list of Enquiries retrieved from DB fetch */}
                 {
                     enquiryState.map(item => (
