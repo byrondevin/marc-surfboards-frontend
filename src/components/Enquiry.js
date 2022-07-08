@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 export default  function Enquiry() {
 
     //state variable for array of user objects. Mapped to display list of users
-    const [enquiryState, setEnquiryState] = useState([{_id: 'No Enquiries', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false,}]);
+    const [enquiryState, setEnquiryState] = useState([{_id: 'No Enquiries', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false}, {_id: 'No Enquiries 2', email: 'Only admin users have access to this page 2', password: 'You have been denied entry 2', admin: false,}]);
     
     //get jwt from session storage
     let JWT = sessionStorage.getItem('JWT');
