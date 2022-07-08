@@ -27,6 +27,12 @@ export default function SignIn() {
             console.log("JWT");
             console.log(JWT);
 
+            //Inform user of successfull login
+            alert("Login successful");
+
+            // //redirect back to homepage
+            window.location.replace('/');
+
 
         }
         //catches axios post errors and prints them out
@@ -37,11 +43,7 @@ export default function SignIn() {
         
         }
 
-        //Inform user of successfull login
-        alert("Login successful");
-
-        // //redirect back to homepage
-        window.location.replace('/');
+        
 
 
     }
