@@ -6,7 +6,7 @@ export default function Nav() {
         <>
             {/* Bootstrap navbar */}
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar" id="navbarNav">
                     <ul class="navbar-nav">
 
                         {/* Home link */}
