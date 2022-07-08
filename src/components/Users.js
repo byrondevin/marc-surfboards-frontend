@@ -15,8 +15,11 @@ export default  function Users() {
     //Request to Get all users 
       async function getUsers () {
         let users = await axios.get(`/users`, {headers: {"Authorization": `Bearer ${JWT}`}});
-        users=users.data;
-        setUserState(users);        
+        users= users.data;
+        console.log(users)
+        setUserState(users); 
+        console.log(UserState)
+
     }
 
     //Request to Delete all users 
