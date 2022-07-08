@@ -69,7 +69,7 @@ export default  function Enquiry() {
   return (
     <div className="Enquiries">
 
-      <div className="container-fluid">
+      <div className="container-fluid hi">
 
         {/* Main heading and subheading */}
         <div className="row text-center">
