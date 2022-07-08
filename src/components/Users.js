@@ -19,7 +19,7 @@ export default  function Users() {
         users= users.data;
         console.log(users)
         setUserState(users.data); 
-        console.log(UserState)
+        console.log(userState)
 
     }
 
