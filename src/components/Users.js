@@ -6,6 +6,7 @@ export default  function Users() {
 
     //state variable for array of user objects. Mapped to display list of users
     const [userState, setUserState] = useState([{_id: 'Log In to see users', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false}, {_id: 'Log In to see users 2', email: 'Only admin users have access to this page 2', password: 'You have been denied entry 2', admin: false}]);
+    console.log(userState);
     
     
     //get jwt from session storage
@@ -17,7 +18,7 @@ export default  function Users() {
         let users = await axios.get(`/users`, {headers: {"Authorization": `Bearer ${JWT}`}});
         users= users.data;
         console.log(users)
-        setUserState(users); 
+        setUserState(users.data); 
         console.log(UserState)
 
     }
