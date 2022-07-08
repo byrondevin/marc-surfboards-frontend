@@ -15,14 +15,17 @@ export default function SignIn() {
 
         //try axios.post to sign in
         try{
-
             //login with post. recieve JWT token in return at user.data.token
             let user = await axios.post(`/sign-in`, {email: e.target[0].value, password: e.target[1].value});
-
+            console.log("USER");
+            console.log(user);
 
             //set JWT token in session storage
             sessionStorage.setItem('JWT', user.data.token);
             let JWT = sessionStorage.getItem('JWT');
+
+            console.log("JWT");
+            console.log(JWT);
 
 
         }
