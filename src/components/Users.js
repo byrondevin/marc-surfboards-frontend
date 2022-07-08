@@ -5,7 +5,8 @@ import React, { useState, useEffect } from 'react';
 export default  function Users() {
 
     //state variable for array of user objects. Mapped to display list of users
-    const [userState, setUserState] = useState([{_id: 'Log In to see users', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false,}]);
+    const [userState, setUserState] = useState([{_id: 'Log In to see users', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false}]);
+    
     
     //get jwt from session storage
     let JWT = sessionStorage.getItem('JWT');
@@ -68,9 +69,10 @@ export default  function Users() {
             <p className='h3'>Marc Surfboards</p>
           </div>
         </div>
-        
+        {console.log(userState)};
             {/* Mapping users to display the list of users retrieved from DB fetch */}
                 {
+                    
                     userState.map(item => (
                         // User ID used as item container key
                         <div key={item._id}>
