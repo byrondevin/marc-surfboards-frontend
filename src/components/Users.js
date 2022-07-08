@@ -6,7 +6,7 @@ export default  function Users() {
 
     //state variable for array of user objects. Mapped to display list of users
     const [userState, setUserState] = useState([{_id: 'Log In to see users', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false}, {_id: 'Log In to see users 2', email: 'Only admin users have access to this page 2', password: 'You have been denied entry 2', admin: false}]);
-    console.log(userState);
+    console.log(userState); //UNDEFINED
     
     
     //get jwt from session storage
@@ -20,7 +20,7 @@ export default  function Users() {
         console.log("AFTER get users")
         users= users.data;
         console.log(users)
-        setUserState(users.data); 
+        setUserState(users.data);  // ARRAY
         console.log(userState)
 
     }
@@ -53,7 +53,7 @@ export default  function Users() {
   
   }
     
-
+  getUsers ();
 
     //run getUsers() function to get all users from db after page loaded
     useEffect(() => {
