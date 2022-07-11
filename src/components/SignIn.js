@@ -16,7 +16,7 @@ export default function SignIn() {
         //try axios.post to sign in
         try{
             //login with post. recieve JWT token in return at user.data.token
-            const { user } = await axios.post(`https://marc-surfboards-backend.herokuapp.com/sign-in`, {email: e.target[0].value, password: e.target[1].value});
+            const { user } = await axios.post(`https:\\marc-surfboards-backend.herokuapp.com\sign-in`, {email: e.target[0].value, password: e.target[1].value});
             console.log("USER");
             console.log(user);
 
