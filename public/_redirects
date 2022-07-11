@@ -1,4 +1,4 @@
 /*    /index.html   200 
-/sign-in    https://marc-surfboards-backend.herokuapp.com/sign-in   200 
-/sign-up    https://marc-surfboards-backend.herokuapp.com/sign-up   200 
-/users    https://marc-surfboards-backend.herokuapp.com/users   200 
+/sign-in/*    https://marc-surfboards-backend.herokuapp.com/sign-in   200 
+/sign-up/*    https://marc-surfboards-backend.herokuapp.com/sign-up   200 
+/users/*    https://marc-surfboards-backend.herokuapp.com/users   200 
