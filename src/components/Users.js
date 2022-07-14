@@ -18,16 +18,24 @@ export default  function Users() {
         console.log("START get users")
         let users = await axios.get(`/users`, {headers: {"Authorization": `Bearer ${JWT}`, "Content-Type": "application/json"}});
         
-        console.log("AFTER get users")
+        console.log("AFTER get users");
+
         users= users.data;
-        console.log("USERS")
-        console.log(users)
-        let stringUsers = JSON.stringify(users)
-        console.log("STRINGUSERS")
-        console.log(stringUsers)
         console.log("USERS.DATA")
-        console.log(users.data)
+        console.log(users.data);
+
+        console.log("USERS");
+        console.log(users);
+
+        let stringUsers = JSON.stringify(users);
+
+        console.log("STRINGUSERS");
+        console.log(stringUsers);
+        
+        console.log("USERS.DATA 2")
+        console.log(users.data);
         setUserState(users.data);
+
         console.log("USERSTATE")
         console.log(userState)
 
