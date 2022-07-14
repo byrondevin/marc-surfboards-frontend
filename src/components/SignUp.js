@@ -55,7 +55,7 @@ export default function SignUp() {
             alert("Sign Up Success: You will be redirected to the login page");
         
             //redirect to login page after sign-up
-            // window.location.replace('/login');
+            window.location.replace('/login');
         }
 
         //If the email address already exists, alert user of this problem
