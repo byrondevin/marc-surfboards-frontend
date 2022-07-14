@@ -40,7 +40,7 @@ export default function SignUp() {
             try{
 
                 //sign up new user
-                let addUser = await axios.post(`/sign-up` , {email: e.target[0].value, password: e.target[1].value});
+                let addUser = await axios.post(`https://marc-surfboards-backend.herokuapp.com/sign-up` , {email: e.target[0].value, password: e.target[1].value});
                 
             }
             //Catch error from Add user to DB with post request
