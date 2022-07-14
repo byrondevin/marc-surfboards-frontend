@@ -56,7 +56,7 @@ export default  function Users() {
         try{
 
           //request to express that handles the db delete
-          let userDelete = await axios.post(`/server/users/${e.target.id}/?_method=DELETE`);
+          let userDelete = await axios.post(`/server/users/${e.target.id}/?_method=DELETE`, {headers: {"Authorization": `Bearer ${JWT}`}});
 
           //removing item from state array. updates display
           setUserState(userState.filter(user => user._id !== e.target.id))
