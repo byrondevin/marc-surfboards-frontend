@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/server/*"
+  to = "https://marc-surfboards-backend.herokuapp.com/:splat"
+  status = 200
+  force = true
