@@ -1,4 +1,4 @@
-/server/*    https://marc-surfboards-backend.herokuapp.com/:splat   200
+/api/*    https://marc-surfboards-backend.herokuapp.com/:splat   200
 /*    /index.html   200 
 
 

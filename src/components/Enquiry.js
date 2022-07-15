@@ -37,7 +37,7 @@ export default  function Enquiry() {
           console.log ("Into try");
 
           //request to express that handles the db delete
-          let enquiryDelete = await axios.post(`/server/enquiry/${e.target.id}/?_method=DELETE`);
+          let enquiryDelete = await axios.post(`/api/enquiry/${e.target.id}/?_method=DELETE`);
 
           //removing item from state array. updates display
           setEnquiryState(enquiryState.filter(user => user._id !== e.target.id))
