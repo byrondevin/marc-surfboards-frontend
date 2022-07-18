@@ -75,6 +75,17 @@ export default  function Users() {
         }
   
   }
+
+  async function editUser(e){
+    e.preventDefault();
+    console.log(e)
+
+    try{
+      // let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${item._id}`)
+    }catch(e){
+
+    }
+  }
     
   
 
@@ -136,7 +147,7 @@ export default  function Users() {
                                     <h3>Edit User Details</h3>
 
                                     {/* Edit form */}
-                                    <form action={`https://marc-surfboards-backend.herokuapp.com/users/${item._id}?_method=PUT`} method="POST">
+                                    <form onSubmit={editUser}>
 
                                         {/* Email address input */}
                                         <div className="form-group" key={item._id}>
