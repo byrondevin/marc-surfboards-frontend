@@ -134,7 +134,7 @@ export default  function Users() {
                                     <h3>Edit User Details</h3>
 
                                     {/* Edit form */}
-                                    <form action={`/users/${item._id}?_method=PUT`} method="POST">
+                                    <form action={`https://marc-surfboards-backend.herokuapp.com/users/${item._id}?_method=PUT`} method="POST">
 
                                         {/* Email address input */}
                                         <div className="form-group" key={item._id}>
