@@ -1,13 +1,6 @@
 
 import axios from "axios";
-import cors from "cors";
 
-
-
-//CORS allowing cross origin requests
-app.use(cors({
-    origin: "https://marc-surfboards-backend.herokuapp.com/",
-}))
 
 
 export default function SignUp() {
