@@ -56,12 +56,14 @@ export default  function Users() {
         try{
 
           //request to express that handles the db delete
-          let userDelete = await axios.post(`https://marc-surfboards-backend.herokuapp.com/usersdel/${e.target.id}/?_method=DELETE`, {headers: {"Authorization": `Bearer ${JWT}`}});
+          let userDelete = await axios.delete(`https://marc-surfboards-backend.herokuapp.com/usersdel/${e.target.id}/`, {headers: {"Authorization": `Bearer ${JWT}`}});
 
           //removing item from state array. updates display
           setUserState(userState.filter(user => user._id !== e.target.id))
 
 
+          //redirect to login page after deletion
+          window.location.replace('/users');
 
           return userDelete;
         }

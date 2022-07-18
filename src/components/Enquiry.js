@@ -37,7 +37,7 @@ export default  function Enquiry() {
           console.log ("Into try");
 
           //request to express that handles the db delete
-          let enquiryDelete = await axios.post(`https://marc-surfboards-backend.herokuapp.com/enquiry/${e.target.id}/?_method=DELETE`);
+          let enquiryDelete = await axios.delete(`https://marc-surfboards-backend.herokuapp.com/enquiry/${e.target.id}/`);
 
           //removing item from state array. updates display
           setEnquiryState(enquiryState.filter(user => user._id !== e.target.id))
