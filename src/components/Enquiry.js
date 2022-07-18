@@ -15,7 +15,7 @@ export default  function Enquiry() {
       async function getEnquiries () {
         
         try{
-        let enquiries = await axios.get(`/server/enquiry`, {headers: {"Authorization": `Bearer ${JWT}`}});
+        let enquiries = await axios.get(`https://marc-surfboards-backend.herokuapp.com/enquiry`, {headers: {"Authorization": `Bearer ${JWT}`}});
         enquiries=enquiries.data;
         setEnquiryState(enquiries);
 
@@ -37,7 +37,7 @@ export default  function Enquiry() {
           console.log ("Into try");
 
           //request to express that handles the db delete
-          let enquiryDelete = await axios.post(`/api/enquiry/${e.target.id}/?_method=DELETE`);
+          let enquiryDelete = await axios.post(`https://marc-surfboards-backend.herokuapp.com/enquiry/${e.target.id}/?_method=DELETE`);
 
           //removing item from state array. updates display
           setEnquiryState(enquiryState.filter(user => user._id !== e.target.id))

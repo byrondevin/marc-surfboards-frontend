@@ -24,7 +24,7 @@ export default function Home() {
       try{
 
         //axios request to express. add an enquiry to the enquiry collection on DB
-        let addEnquiry = await axios.post(`/enquiry` , {name: e.target[0].value, email: e.target[1].value, board: e.target[2].value, message: e.target[3].value});
+        let addEnquiry = await axios.post(`https://marc-surfboards-backend.herokuapp.com/enquiry` , {name: e.target[0].value, email: e.target[1].value, board: e.target[2].value, message: e.target[3].value});
 
         alert("Enquiry sent");
 

@@ -16,7 +16,7 @@ export default  function Users() {
     //Request to Get all users 
       async function getUsers () {
         console.log("START get users")
-        let users = await axios.get(`/server/users`, {headers: {"Authorization": `Bearer ${JWT}`, "Content-Type": "application/json"}});
+        let users = await axios.get(`https://marc-surfboards-backend.herokuapp.com/users`, {headers: {"Authorization": `Bearer ${JWT}`, "Content-Type": "application/json"}});
         
         console.log("AFTER get users");
 
@@ -56,7 +56,7 @@ export default  function Users() {
         try{
 
           //request to express that handles the db delete
-          let userDelete = await axios.post(`/server/usersdel/${e.target.id}/?_method=DELETE`, {headers: {"Authorization": `Bearer ${JWT}`}});
+          let userDelete = await axios.post(`https://marc-surfboards-backend.herokuapp.com/usersdel/${e.target.id}/?_method=DELETE`, {headers: {"Authorization": `Bearer ${JWT}`}});
 
           //removing item from state array. updates display
           setUserState(userState.filter(user => user._id !== e.target.id))
