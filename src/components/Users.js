@@ -79,15 +79,28 @@ export default  function Users() {
     e.preventDefault();
     console.log(e)
       console.log (e.target);
-      console.log (e.target.form);
+
+      //user id
+      console.log ("e.target.id");
       console.log (e.target.id);
+
+      //user email
+      console.log ("e.target[0].value");
       console.log (e.target[0].value);
+
+      //user password
+      console.log ("e.target[1].value");
       console.log (e.target[1].value);
+
+      //user admin status
+      console.log ("e.target[2].value");
       console.log (e.target[2].value);
+
+      console.log ("e.target[3].value");
       console.log (e.target[3].value);
 
     try{
-      // let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${item._id}`)
+      // let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${e.target.id}`)
     }catch(e){
 
     }
