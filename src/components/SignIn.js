@@ -18,7 +18,7 @@ export default function SignIn() {
 
             //login with post. recieve JWT token in return at user.data.token
             const user = await axios.post(`https://marc-surfboards-backend.herokuapp.com/sign-in`, {email: e.target[0].value, password: e.target[1].value});
-            console.log(user.data.token);
+
             //set JWT token in session storage
             sessionStorage.setItem('JWT', user.data.token);
             let JWT = sessionStorage.getItem('JWT');
