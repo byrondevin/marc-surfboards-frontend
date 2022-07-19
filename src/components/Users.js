@@ -78,6 +78,9 @@ export default  function Users() {
   async function editUser(e){
     e.preventDefault();
     console.log(e)
+      console.log (e.target);
+      console.log (e.target.form);
+      console.log (e.target.id);
       console.log (e.target[0].value);
       console.log (e.target[1].value);
       console.log (e.target[2].value);
