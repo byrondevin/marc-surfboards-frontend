@@ -75,41 +75,54 @@ export default  function Users() {
   
   }
 
-  async function editUser(e){
+
+
+//EDIT USER REQUEST
+async function editUser(e){
+
+    //prevent reload on form submit
     e.preventDefault();
 
-      //extract new user info from form
-      const userId = e.target.id;
-      const userEmail = e.target[0].value;
-      const userPW = e.target[1].value;
-      let userAdmin = e.target[2].checked;
+    //extract new user info from form
+    const userId = e.target.id;
+    const userEmail = e.target[0].value;
+    const userPW = e.target[1].value;
+    let userAdmin = e.target[2].checked;
 
-      const params = JSON.stringify({
-        "userId":userId,
-        "userEmail":userEmail,
-        "userPW":userPW,
-        "userAdmin":userAdmin
-      })
-
-
+    const params = JSON.stringify({
+      "userId":userId,
+      "userEmail":userEmail,
+      "userPW":userPW,
+      "userAdmin":userAdmin
+    })
 
     try{
-
-
+      //request to edit user
       let editedUser = await axios.put(
+
+        //request URL
         `https://marc-surfboards-backend.herokuapp.com/users`, 
+
+        //request body
         params,
+
+        //request headers
         {
           "headers":{
             "content-type":"application/json"
           }
         }
       )
-      console.log("__editedUser__");
+      //print out returned result of the edit user db update
+      console.log("editedUser");
       console.log(editedUser);
-   
+      getUsers ();
+
+    //catch errors related to the edit user PUT request
     }catch(e){
 
+      console.log("Axios PUT request to edit users failed");
+      console.log(e);
     }
   }
     
