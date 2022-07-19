@@ -13,7 +13,7 @@ test('sign in', async () => {
     `https://marc-surfboards-backend.herokuapp.com/sign-in`, 
     {email: "r@r", password: "r"}
   );
-  expect(user.data.token).toBe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJAciIsImFkbWluIjp0cnVlfQ.HaQpcsr8nqCvnMlPIO55ufUhq1csbzTsSVQCDE3yWMo");
+  expect(user.data.token).toBe("eyJhbGciOiJIUzI1NiIsInR5cGUiOiJKV1QifQ.eyJlbWFpbCI6InJAciIsImFkbWluIjp0cnVlfQ.0ujkYNcwfW1kZkZn4pXRUXXr6ScT0h5HEROYv_U4vsY");
 //to be json
 });
 
