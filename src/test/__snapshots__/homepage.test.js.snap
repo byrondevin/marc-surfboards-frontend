@@ -55,42 +55,58 @@ exports[`homepage matches snapshot 1`] = `
       <div
         className="col-12 col-md-3 mb-3"
       >
-        <button
-          className="btn btn-light hp-head-btns"
-          type="button"
+        <a
+          href="#performanceShortboards"
         >
-          Shortboards
-        </button>
+          <button
+            className="btn btn-light hp-head-btns"
+            type="button"
+          >
+            Shortboards
+          </button>
+        </a>
       </div>
       <div
         className="col-12 col-md-3 mb-3"
       >
-        <button
-          className="btn btn-light hp-head-btns"
-          type="button"
+        <a
+          href="#ecoBoard"
         >
-          Eco/Upcycled
-        </button>
+          <button
+            className="btn btn-light hp-head-btns"
+            type="button"
+          >
+            Eco/Upcycled
+          </button>
+        </a>
       </div>
       <div
         className="col-12 col-md-3 mb-3"
       >
-        <button
-          className="btn btn-light hp-head-btns"
-          type="button"
+        <a
+          href="#longboard"
         >
-          Longboards
-        </button>
+          <button
+            className="btn btn-light hp-head-btns"
+            type="button"
+          >
+            Longboards
+          </button>
+        </a>
       </div>
       <div
         className="col-12 col-md-3 mb-3"
       >
-        <button
-          className="btn btn-light hp-head-btns"
-          type="button"
+        <a
+          href="#funboards"
         >
-          Mid/Fun Boards
-        </button>
+          <button
+            className="btn btn-light hp-head-btns"
+            type="button"
+          >
+            Mid/Fun Boards
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -101,18 +117,24 @@ exports[`homepage matches snapshot 1`] = `
     <div
       className="col-12 col-sm-6"
     >
-      <h2>
+      <h2
+        id="performanceShortboards"
+      >
         Performance Shortboards
       </h2>
       <p>
         Price range: R10k - R15k
       </p>
-      <button
-        className="btn btn-primary"
-        type="button"
+      <a
+        href="#contact"
       >
-        Enquire
-      </button>
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Enquire
+        </button>
+      </a>
     </div>
     <div
       className="col-12 col-sm-6"
@@ -139,7 +161,7 @@ exports[`homepage matches snapshot 1`] = `
         className="rounded board-pic my-2 shadow"
         display="block"
         height="300"
-        id="shortboard"
+        id="ecoBoard"
         src="eco-board.jpg"
         width="auto"
       />
@@ -153,12 +175,16 @@ exports[`homepage matches snapshot 1`] = `
       <p>
         Price range: R7.5k - R10k
       </p>
-      <button
-        className="btn btn-primary"
-        type="button"
+      <a
+        href="#contact"
       >
-        Enquire
-      </button>
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Enquire
+        </button>
+      </a>
     </div>
   </div>
   <div
@@ -167,18 +193,24 @@ exports[`homepage matches snapshot 1`] = `
     <div
       className="col-12 col-sm-6"
     >
-      <h2>
+      <h2
+        id="longboard"
+      >
         Longboards
       </h2>
       <p>
         Price range: R10k - R20k
       </p>
-      <button
-        className="btn btn-primary"
-        type="button"
+      <a
+        href="#contact"
       >
-        Enquire
-      </button>
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Enquire
+        </button>
+      </a>
     </div>
     <div
       className="col-12 col-sm-6"
@@ -205,7 +237,7 @@ exports[`homepage matches snapshot 1`] = `
         className="rounded board-pic my-2 shadow"
         display="block"
         height="300"
-        id="shortboard"
+        id="funboards"
         src="fun-mid-board.jpg"
         width="auto"
       />
@@ -219,12 +251,16 @@ exports[`homepage matches snapshot 1`] = `
       <p>
         Price range: R8.5k - R20k
       </p>
-      <button
-        className="btn btn-primary"
-        type="button"
+      <a
+        href="#contact"
       >
-        Enquire
-      </button>
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Enquire
+        </button>
+      </a>
     </div>
   </div>
   <div
@@ -236,7 +272,9 @@ exports[`homepage matches snapshot 1`] = `
       <div
         className="col"
       >
-        <h2>
+        <h2
+          id="contact"
+        >
           Contact
         </h2>
       </div>

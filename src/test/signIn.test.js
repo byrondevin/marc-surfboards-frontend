@@ -9,8 +9,11 @@ import axios from "axios";
 //fetch users from db test
 test('sign in', async () => {
   
-  let user = await axios.post(`http://localhost:5000/sign-in`, {email: "e@e", password: "e"});
-  expect(user.data.token).to.be.defined();
+  let user = await axios.post(
+    `https://marc-surfboards-backend.herokuapp.com/sign-in`, 
+    {email: "e@e", password: "e"}
+  );
+  expect(user).to.be.defined();
 });
 
 
