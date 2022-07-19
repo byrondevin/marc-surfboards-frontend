@@ -83,7 +83,7 @@ export default  function Users() {
       const userId = e.target.id;
       const userEmail = e.target[0].value;
       const userPW = e.target[1].value;
-      const userAdmin = e.target[2].value;
+      let userAdmin = e.target[2].value;
 
       //convert admin checkbox into boolean value
       if(userAdmin== "on"){
