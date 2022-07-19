@@ -4,22 +4,6 @@ import axios from "axios";
 
 export default function SignUp() {
 
-    //Function to check if email address is already in database. 
-    async function checkEmail (email){
-        try{
-
-            return false
-            
-        }
-        catch(e){
-
-            //catching and throwing any error if axios get fails. Alerting user of failed search.
-            console.log("axois search to db failed");
-            throw(e);
-    
-        }
-    }
-
 
     // signUp function. Triggered when signup form is subitted
     async function signUpAddUser (e) {
@@ -27,11 +11,6 @@ export default function SignUp() {
         //prevent default form redirection
         e.preventDefault();
 
-        //check if email already exists by calling checkEmail() function
-        let emailAlreadyExists = await checkEmail(e.target[0].value)
-
-        //If the email address is open, add to db
-        if (emailAlreadyExists == false){
 
             //Try add user to DB with post request
             try{
@@ -54,24 +33,6 @@ export default function SignUp() {
                 alert("Sign Up Failed: try a different email address");
 
             }
-
-
-        }
-
-        //If the email address already exists, alert user of this problem
-        else if(emailAlreadyExists == true){
-
-            //alert user that email address is already used
-            alert("The email address you entered already exists. Login using your password or use another email address to create an account")
-        
-        }
-
-        //If the check email function does not return true or false. console.log for degugging process
-        else{
-
-            console.log("the fucntion to check if the email entered did not return a valid response (Either true or false)")
-        
-        }
 
     }
 
