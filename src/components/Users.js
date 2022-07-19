@@ -84,6 +84,8 @@ export default  function Users() {
       const userEmail = e.target[0].value;
       const userPW = e.target[1].value;
       let userAdmin = e.target[2].value;
+      console.log("userAdmin");
+      console.log(userAdmin);
 
       //convert admin checkbox into boolean value
       if(userAdmin== "on"){
@@ -99,7 +101,7 @@ export default  function Users() {
     try{
 
 
-      let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users`, {body: {"userId": `${e.target.id}`, "userEmail": `${e.target[0]}`, "userPW": `${e.target[1]}`, "userAdmin": `${e.target[2]}`}})
+      let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users`, {body: {"userId": `${userId}`, "userEmail": `${userEmail}`, "userPW": `${userPW}`, "userAdmin": `${userAdmin}`}})
       console.log(editedUser);
    
     }catch(e){
