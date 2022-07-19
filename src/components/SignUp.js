@@ -38,6 +38,12 @@ export default function SignUp() {
 
                 //sign up new user
                 let addUser = await axios.post(`https://marc-surfboards-backend.herokuapp.com/sign-up` , {email: e.target[0].value, password: e.target[1].value});
+
+                //Alert user of sign up success
+                alert("Sign Up Success: You will be redirected to the login page");
+        
+                //redirect to login page after sign-up
+                window.location.replace('/login');
                 
             }
             //Catch error from Add user to DB with post request
@@ -45,14 +51,11 @@ export default function SignUp() {
 
                 console.log('ERROR: add user to DB failed')
                 console.log(e)
+                alert("Sign Up Failed: try a different email address");
 
             }
 
-            //Alert user of sign up success
-            alert("Sign Up Success: You will be redirected to the login page");
-        
-            //redirect to login page after sign-up
-            window.location.replace('/login');
+
         }
 
         //If the email address already exists, alert user of this problem
