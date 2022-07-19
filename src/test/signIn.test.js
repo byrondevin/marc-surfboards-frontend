@@ -11,9 +11,10 @@ test('sign in', async () => {
   
   let user = await axios.post(
     `https://marc-surfboards-backend.herokuapp.com/sign-in`, 
-    {email: "e@e", password: "e"}
+    {email: "r@r", password: "r"}
   );
-  expect(user).to.be.defined();
+  expect(user.data.token).toBe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJAciIsImFkbWluIjp0cnVlfQ.HaQpcsr8nqCvnMlPIO55ufUhq1csbzTsSVQCDE3yWMo");
+//to be json
 });
 
 
