@@ -77,7 +77,6 @@ export default  function Users() {
 
   async function editUser(e){
     e.preventDefault();
-    console.log(e)
 
       //extract new user info from form
       const userId = e.target.id;
