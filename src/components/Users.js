@@ -113,9 +113,12 @@ async function editUser(e){
           }
         }
       )
+      
       //print out returned result of the edit user db update
       console.log("editedUser");
       console.log(editedUser);
+
+      //fetch new, edited list of users from db
       getUsers ();
 
     //catch errors related to the edit user PUT request
