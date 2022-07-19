@@ -5,12 +5,7 @@ import "@testing-library/jest-dom";
 
 
 
-
-
-
-
 //nav component snapshot test
-
 test('nav matches snapshot', () => {
     const tree = renderer
   
