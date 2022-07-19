@@ -62,8 +62,7 @@ export default  function Users() {
           setUserState(userState.filter(user => user._id !== e.target.id))
 
 
-          //redirect to login page after deletion
-          window.location.replace('/users');
+
 
           return userDelete;
         }
@@ -79,6 +78,10 @@ export default  function Users() {
   async function editUser(e){
     e.preventDefault();
     console.log(e)
+      console.log (e.target[0]);
+      console.log (e.target[1]);
+      console.log (e.target[2]);
+      console.log (e.target[3]);
 
     try{
       // let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${item._id}`)
