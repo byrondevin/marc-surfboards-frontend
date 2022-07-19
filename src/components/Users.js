@@ -84,12 +84,27 @@ export default  function Users() {
       const userPW = e.target[1].value;
       let userAdmin = e.target[2].checked;
 
+      const params = JSON.stringify({
+        "userId":userId,
+        "userEmail":userEmail,
+        "userPW":userPW,
+        "userAdmin":userAdmin
+      })
+
 
 
     try{
 
 
-      let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users`, {body: {"userId": `${userId}`, "userEmail": `${userEmail}`, "userPW": `${userPW}`, "userAdmin": `${userAdmin}`}})
+      let editedUser = await axios.put(
+        `https://marc-surfboards-backend.herokuapp.com/users`, 
+        params,
+        {
+          "headers":{
+            "content-type":"application/json"
+          }
+        }
+      )
       console.log("__editedUser__");
       console.log(editedUser);
    
