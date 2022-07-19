@@ -92,6 +92,8 @@ export default  function Users() {
         userAdmin = false;
       }
 
+      console.log(userAdmin);
+
 
 
     try{
