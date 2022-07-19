@@ -83,16 +83,16 @@ export default  function Users() {
       const userId = e.target.id;
       const userEmail = e.target[0].value;
       const userPW = e.target[1].value;
-      let userAdmin = e.target[2].value;
+      let userAdmin = e.target[2].checked;
       console.log("userAdmin");
       console.log(userAdmin);
 
       //convert admin checkbox into boolean value
-      if(userAdmin== "on"){
-        userAdmin = true;
-      }else{
-        userAdmin = false;
-      }
+      // if(userAdmin== "on"){
+      //   userAdmin = true;
+      // }else{
+      //   userAdmin = false;
+      // }
 
       console.log(userAdmin);
 
@@ -156,7 +156,7 @@ export default  function Users() {
                                     {/* User admin access */}
                                     <p>Admin: {item.admin.toString()}</p>
 
-                                    <button id={item._id} onClick={deleteUser } type="btn" className="btn btn-primary mt-4">Delete</button>
+                                    <button id={item._id} onClick={deleteUser} type="btn" className="btn btn-primary mt-4">Delete</button>
 
 
                                 </div>
