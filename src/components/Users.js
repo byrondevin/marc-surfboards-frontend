@@ -97,7 +97,7 @@ export default  function Users() {
     try{
 
 
-      let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${e.target.id}`, {body: {"userId": `${e.target.id}`, "userEmail": `${e.target[0]}`, "userPW": `${e.target[1]}`, "userAdmin": `${e.target[2]}`}})
+      let editedUser = await axios.put(`https://marc-surfboards-backend.herokuapp.com/users/${userId}`, {body: {"userId": `${e.target.id}`, "userEmail": `${e.target[0]}`, "userPW": `${e.target[1]}`, "userAdmin": `${e.target[2]}`}})
       console.log(editedUser);
    
     }catch(e){
