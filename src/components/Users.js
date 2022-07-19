@@ -150,7 +150,7 @@ export default  function Users() {
                                     <h3>Edit User Details</h3>
 
                                     {/* Edit form b */}
-                                    <form onSubmit={editUser}>
+                                    <form onSubmit={editUser} id={item._id}>
 
                                         {/* Email address input */}
                                         <div className="form-group" key={item._id}>
