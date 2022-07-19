@@ -1,66 +1,74 @@
+//IMPORTS
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 
 
 export default  function Enquiry() {
 
-    //state variable for array of user objects. Mapped to display list of users
+    //state variable for array of user objects. Mapped to display list of enquiries
     const [enquiryState, setEnquiryState] = useState([{_id: 'No Enquiries', email: 'Only admin users have access to this page', password: 'You have been denied entry', admin: false}, {_id: 'No Enquiries 2', email: 'Only admin users have access to this page 2', password: 'You have been denied entry 2', admin: false,}]);
     
     //get jwt from session storage
     let JWT = sessionStorage.getItem('JWT');
   
 
-    //Request to Get all users 
+    //Request to Get all enquiries 
       async function getEnquiries () {
         
+        //try get all enquiries
         try{
-        let enquiries = await axios.get(`https://marc-surfboards-backend.herokuapp.com/enquiry`, {headers: {"Authorization": `Bearer ${JWT}`}});
-        enquiries=enquiries.data;
-        setEnquiryState(enquiries);
+
+          //axios.get to express server to get all enquiries
+          let enquiries = await axios.get(`https://marc-surfboards-backend.herokuapp.com/enquiry`, {headers: {"Authorization": `Bearer ${JWT}`}});
+          enquiries=enquiries.data;
+
+          //set enquiry state after axios fetch 
+          setEnquiryState(enquiries);
 
         }
+        //catch and print out any errors relating to the fetch all enquiries axios request
         catch(e){
+
           console.log("GET ALL ENQUIRIES FALIED");
           console.log(e);
+
         }
         
     }
 
     //Request to Delete all enquiries 
     async function deleteEnquiry(e){
-      
-      console.log (e.target.id);
-    
-        //Try axios post with method ovverride to change to delete request.
-        try{
-          console.log ("Into try");
+          
+      //Try axios post with method ovverride to change to delete request.
+      try{
 
-          //request to express that handles the db delete
-          let enquiryDelete = await axios.delete(`https://marc-surfboards-backend.herokuapp.com/enquiry/${e.target.id}`, {headers: {"Authorization": `Bearer ${JWT}`}});
+        //request to express that handles the db delete
+        let enquiryDelete = await axios.delete(`https://marc-surfboards-backend.herokuapp.com/enquiry/${e.target.id}`, {headers: {"Authorization": `Bearer ${JWT}`}});
 
-          //removing item from state array. updates display
-          setEnquiryState(enquiryState.filter(user => user._id !== e.target.id))
+        //removing item from state array. updates display
+        setEnquiryState(enquiryState.filter(user => user._id !== e.target.id))
 
-          return enquiryDelete;
-        }
-        catch(e){
-          //catching and throwing any error if axios get fails. Alerting user of failed search.
-          console.log("axois delete  from db failed");
-          throw(e);
+        return enquiryDelete;
 
-        }
+      }
+      catch(e){
+
+        //catching and throwing any error if axios get fails. Alerting user of failed search.
+        console.log("axois delete  from db failed");
+        throw(e);
+
+      }
   
   }
     
 
 
-    //run getEnquiries() function to get all Enquiries from db after page loaded
-    useEffect(() => {
+  //run getEnquiries() function to get all Enquiries from db after page loaded
+  useEffect(() => {
 
-      getEnquiries ();
+    getEnquiries ();
 
-    },[])
+  },[])
 
 
 
@@ -78,7 +86,7 @@ export default  function Enquiry() {
             <p className='h3'>Marc Surfboards</p>
           </div>
         </div>
-        {console.log(enquiryState)};
+        
             {/* Mapping Enquiries to display the list of Enquiries retrieved from DB fetch */}
                 {
                     enquiryState.map(item => (
@@ -93,19 +101,23 @@ export default  function Enquiry() {
 
                                     {/* Display user info heading */}
                                     <h3>Enquiry Information</h3>
+
                                     {/* User Id */}
                                     <p>Enquiry ID: {item._id}</p>
+
                                     {/* Enquirer's Name */}
                                     <p>Enquirer's name: {item.name}</p>
+
                                     {/* User email */}
                                     <p>Enquirer's Email address: {item.email}</p>
+
                                     {/* User password */}
                                     <p>Board Type: {item.board}</p>
+
                                     {/* User admin access */}
                                     <p>Message: {item.message}</p>
 
                                     <button id={item._id} onClick={deleteEnquiry } type="btn" className="btn btn-primary mt-4">Delete</button>
-
 
                                 </div>
                             </div>

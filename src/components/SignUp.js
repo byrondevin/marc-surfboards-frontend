@@ -1,28 +1,24 @@
-
+//IMPORTS
 import axios from "axios";
-
 
 
 export default function SignUp() {
 
-    //Create function to check if email address is already in database. Outside of this SignUp function
-            //this function will return true or false value. If true, match found and email already exists
-            //if return = no match (undefined/null/??) then return false
-            //if match found, return true 
+    //Function to check if email address is already in database. 
     async function checkEmail (email){
         try{
+
             return false
+            
         }
         catch(e){
+
             //catching and throwing any error if axios get fails. Alerting user of failed search.
             console.log("axois search to db failed");
             throw(e);
     
         }
     }
-
-
-
 
 
     // signUp function. Triggered when signup form is subitted
@@ -61,6 +57,7 @@ export default function SignUp() {
 
         //If the email address already exists, alert user of this problem
         else if(emailAlreadyExists == true){
+
             //alert user that email address is already used
             alert("The email address you entered already exists. Login using your password or use another email address to create an account")
         
@@ -68,6 +65,7 @@ export default function SignUp() {
 
         //If the check email function does not return true or false. console.log for degugging process
         else{
+
             console.log("the fucntion to check if the email entered did not return a valid response (Either true or false)")
         
         }

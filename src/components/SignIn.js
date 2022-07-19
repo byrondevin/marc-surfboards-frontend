@@ -15,21 +15,13 @@ export default function SignIn() {
 
         //try axios.post to sign in
         try{
-            console.log("e.target[0].value");
-            console.log(e.target[0].value);
-            console.log("e.target[1].value");
-            console.log(e.target[1].value);
+
             //login with post. recieve JWT token in return at user.data.token
             const user = await axios.post(`https://marc-surfboards-backend.herokuapp.com/sign-in`, {email: e.target[0].value, password: e.target[1].value});
-            console.log("USER");
-            console.log(user);
 
             //set JWT token in session storage
             sessionStorage.setItem('JWT', user.data.token);
             let JWT = sessionStorage.getItem('JWT');
-
-            console.log("JWT");
-            console.log(JWT);
 
             //Inform user of successfull login
             alert("Login successful");
@@ -37,8 +29,8 @@ export default function SignIn() {
             // //redirect back to homepage
             window.location.replace('/');
 
-
         }
+        
         //catches axios post errors and prints them out
         catch(e){
 
@@ -46,10 +38,6 @@ export default function SignIn() {
             console.log(e)
         
         }
-
-        
-
-
     }
 
 

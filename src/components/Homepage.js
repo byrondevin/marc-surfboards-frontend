@@ -1,3 +1,4 @@
+//IMPORTS
 import axios from "axios";
 import './Homepage.css';
 import React, {useState} from 'react';
@@ -26,9 +27,11 @@ export default function Home() {
         //axios request to express. add an enquiry to the enquiry collection on DB
         let addEnquiry = await axios.post(`https://marc-surfboards-backend.herokuapp.com/enquiry` , {name: e.target[0].value, email: e.target[1].value, board: e.target[2].value, message: e.target[3].value});
 
+        //alert user of successfull enquiry entry
         alert("Enquiry sent");
 
       }
+      //catch and print errors related to the post request to add a new enquiry to the db
       catch(e){
 
         console.log('ERROR: add enquiry to DB failed')
@@ -76,8 +79,6 @@ export default function Home() {
               <a href="#performanceShortboards">
                 <button type="button" className="btn btn-light hp-head-btns">Shortboards</button>
               </a>
-              {/* With scroll to section onclick */}
-              {/* <button onClick={scrollToSection()} type="button" className="btn btn-light hp-head-btns">Shortboards</button> */}
             </div>
 
             <div className="col-12 col-md-3 mb-3">
@@ -110,8 +111,10 @@ export default function Home() {
 
             {/* heading 2: shortboard */}
             <h2 id='performanceShortboards'>Performance Shortboards</h2>
+
             {/* p: Pricerange */}
             <p>Price range: R10k - R15k</p>
+
             {/* button: Enquire */}
             <a href="#contact">
               <button type="button" className="btn btn-primary">Enquire</button>
@@ -120,6 +123,7 @@ export default function Home() {
           </div>
 
           <div className="col-12 col-sm-6">
+
             {/* image: shortboard */}
             <img 
               className="rounded board-pic my-2 shadow"  
@@ -155,8 +159,10 @@ export default function Home() {
 
             {/* heading 2: Eco/Upcycled Surfboards */}
             <h2>Eco/Upcycled Surfboards</h2>
+
             {/* p: Pricerange */}
             <p>Price range: R7.5k - R10k</p>
+
             {/* button: Enquire */}
             <a href="#contact">
               <button type="button" className="btn btn-primary">Enquire</button>
@@ -174,8 +180,10 @@ export default function Home() {
 
             {/* heading 2: longboard */}
             <h2 id="longboard">Longboards</h2>
+
             {/* p: Pricerange */}
             <p>Price range: R10k - R20k</p>
+
             {/* button: Enquire */}
             <a href="#contact">
               <button type="button" className="btn btn-primary">Enquire</button>
@@ -220,8 +228,10 @@ export default function Home() {
 
           {/* heading 2: midlength/funboard */}
             <h2>Midlengths and Funboards</h2>
+
             {/* p: Pricerange */}
             <p>Price range: R8.5k - R20k</p>
+
             {/* button: Enquire */}
             <a href="#contact">
               <button type="button" className="btn btn-primary">Enquire</button>
@@ -244,7 +254,9 @@ export default function Home() {
 
           {/* Enquiry form row */}
           <div className="row text-left align-items-center ">
+
             <div className="col">
+              
               {/* Enquiry form: submits to enquirySubmit function */}
               <form onSubmit={enquirySubmit}>
 

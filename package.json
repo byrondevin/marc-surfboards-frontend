@@ -1,8 +1,5 @@
 {
   "name": "frontend",
-  "jest": {
-    "testEnviroment": "node"
-  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {

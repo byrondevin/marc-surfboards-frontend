@@ -23,7 +23,6 @@ exports[`users matches snapshot 1`] = `
         </p>
       </div>
     </div>
-    ;
     <div>
       <div
         className="row border p-5"
