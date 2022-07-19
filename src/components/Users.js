@@ -146,7 +146,7 @@ export default  function Users() {
                                     {/* Edit form heading */}
                                     <h3>Edit User Details</h3>
 
-                                    {/* Edit form */}
+                                    {/* Edit form b */}
                                     <form onSubmit={editUser}>
 
                                         {/* Email address input */}
